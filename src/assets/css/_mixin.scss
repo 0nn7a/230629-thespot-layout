@@ -1,0 +1,18 @@
+@mixin chatBox {
+  position: relative;
+  margin-bottom: 2rem;
+  padding: 0.3rem 1rem;
+  background-color: var(--spot-icon-color);
+  color: var(--spot-base-background-color);
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-left-color: var(--spot-icon-color);
+    transform: translateY(50%);
+  }
+}

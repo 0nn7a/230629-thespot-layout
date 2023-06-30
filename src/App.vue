@@ -1,5 +1,10 @@
 <script setup></script>
 
-<template></template>
+<template>
+  <HeaderBar />
+
+  <TitlePage />
+  <GalleryPage />
+</template>
 
 <style lang="scss" scoped></style>
