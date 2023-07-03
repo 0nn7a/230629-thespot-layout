@@ -181,19 +181,33 @@ a {
     &::before {
       transform: scale(1.25) rotate(90deg);
     }
+    &::after {
+      top: 50%;
+      left: 1.3rem;
+      font-size: 2rem;
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
   }
   &::before {
-    content: "+";
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     display: block;
     height: 2.4rem;
     width: 2.4rem;
-    line-height: 2.2rem;
-    color: var(--spot-base-background-color);
     background-color: var(--spot-base-text-color);
     border-radius: 50%;
+    transition: 0.2s all ease-in;
+  }
+  &::after {
+    content: "+";
+    position: absolute;
+    top: 50%;
+    left: 1.2rem;
+    font-size: 1.5rem;
+    color: var(--spot-base-background-color);
+    transform: translate(-50%, -50%);
     transition: 0.2s all ease-in;
   }
 }
