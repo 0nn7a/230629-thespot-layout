@@ -33,7 +33,6 @@
   box-sizing: border-box;
 }
 html {
-  position: relative;
   line-height: 1.5;
   font-family: Outfit, Noto Sans JP, sans-serif;
   font-size: calc(10 / 16 * 100%); //1rem = 10px
@@ -45,6 +44,7 @@ html {
   overflow: hidden;
 }
 #app {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 100vw;
