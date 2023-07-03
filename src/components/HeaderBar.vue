@@ -1,19 +1,18 @@
 <script setup>
 const showBar = ref(true);
 const pageWidth = ref(window.innerWidth);
-const resize = computed(() => {
-  return pageWidth;
-});
 
 onMounted(() => {
   window.addEventListener("resize", function () {
     pageWidth.value = window.innerWidth;
-    if (pageWidth.value <= 768) {
-      showBar.value = false;
-    } else {
-      showBar.value = true;
-    }
   });
+});
+watchEffect(() => {
+  if (pageWidth.value <= 768) {
+    showBar.value = false;
+  } else {
+    showBar.value = true;
+  }
 });
 </script>
 
