@@ -2,10 +2,6 @@
 
 <template>
   <div class="slider_container">
-    <div class="slider_bg">
-      <img src="/src/assets/images/index_bg_hts_01.jpg" />
-      <img src="/src/assets/images/index_bg_hts_01.jpg" />
-    </div>
     <div class="slider_textarea">
       <div class="slider_textarea_set">
         <img src="/src/assets/images/index_img_hts_01.svg" />
@@ -27,20 +23,11 @@
     position: relative;
     display: flex;
     min-height: 45vw;
+    background: url("/src/assets/images/index_bg_hts_01.jpg") repeat-x;
+    background-size: auto 100%;
     overflow-x: hidden;
-    @media only screen and (max-width: $bp-sm) {
-      min-height: 90vw;
-    }
-  }
-  &_bg {
-    display: flex;
-    height: 100%;
     animation: scroll-bg 60s linear infinite;
-    img {
-      height: 100%;
-    }
   }
-
   &_textarea {
     position: absolute;
     top: 50%;
@@ -64,10 +51,10 @@
 }
 @keyframes scroll-bg {
   0% {
-    transform: translateX(-0%);
+    background-position: 0 0;
   }
   100% {
-    transform: translateX(-50%);
+    background-position: 158% 0;
   }
 }
 @keyframes scroll-text {

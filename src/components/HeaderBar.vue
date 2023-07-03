@@ -50,8 +50,11 @@ watchEffect(() => {
   justify-content: space-between;
   align-items: flex-start;
   padding: 5rem;
+  @media only screen and (max-width: $bp-sm) {
+    padding: 5rem 4rem;
+  }
   @media only screen and (max-width: $bp-xs) {
-    padding: 5rem 3rem;
+    padding: 5rem 2.5rem;
   }
   @media only screen and (min-width: $bp-lg) {
     padding: 6rem;
