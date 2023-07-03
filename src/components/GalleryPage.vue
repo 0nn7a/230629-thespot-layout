@@ -78,6 +78,14 @@
     }
 
     .heading-1 {
+      font-size: 5rem;
+      font-weight: 800;
+      @media only screen and (max-width: $bp-sm) {
+        font-size: 3.2rem;
+      }
+      @media only screen and (max-width: $bp-xs) {
+        font-size: 2.8rem;
+      }
       grid-row: 1 / 2;
       grid-column: 1 / 2;
     }

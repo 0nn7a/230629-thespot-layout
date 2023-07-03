@@ -2,8 +2,16 @@
 
 <template>
   <div class="title_container">
-    <img src="/src/assets/images/title_image.svg" class="title_img" />
-    <img src="/src/assets/images/title_text.svg" class="title_text" />
+    <img
+      src="/src/assets/images/title_image.svg"
+      class="title_img"
+      loading="lazy"
+    />
+    <img
+      src="/src/assets/images/title_text.svg"
+      class="title_text"
+      loading="lazy"
+    />
     <div class="title_soon">
       <h5 class="heading_badge">COMING SOON</h5>
       <p class="plain-text">
@@ -13,14 +21,38 @@
     <div class="title_company">
       <h5 class="heading_badge">ご利用企業様の一例</h5>
       <div class="title_company_logos">
-        <img src="/src/assets/images/company/index_img_case_basecorp.jpg" />
-        <img src="/src/assets/images/company/index_img_case_shiseido.jpg" />
-        <img src="/src/assets/images/company/index_img_case_cyberagent.jpg" />
-        <img src="/src/assets/images/company/index_img_case_dentsu.jpg" />
-        <img src="/src/assets/images/company/index_img_case_honda.jpg" />
-        <img src="/src/assets/images/company/index_img_case_tvasahi.jpg" />
-        <img src="/src/assets/images/company/index_img_case_yahoo.jpg" />
-        <img src="/src/assets/images/company/index_img_case_recruit.jpg" />
+        <img
+          src="/src/assets/images/company/index_img_case_basecorp.jpg"
+          loading="lazy"
+        />
+        <img
+          src="/src/assets/images/company/index_img_case_shiseido.jpg"
+          loading="lazy"
+        />
+        <img
+          src="/src/assets/images/company/index_img_case_cyberagent.jpg"
+          loading="lazy"
+        />
+        <img
+          src="/src/assets/images/company/index_img_case_dentsu.jpg"
+          loading="lazy"
+        />
+        <img
+          src="/src/assets/images/company/index_img_case_honda.jpg"
+          loading="lazy"
+        />
+        <img
+          src="/src/assets/images/company/index_img_case_tvasahi.jpg"
+          loading="lazy"
+        />
+        <img
+          src="/src/assets/images/company/index_img_case_yahoo.jpg"
+          loading="lazy"
+        />
+        <img
+          src="/src/assets/images/company/index_img_case_recruit.jpg"
+          loading="lazy"
+        />
       </div>
     </div>
   </div>
@@ -70,7 +102,7 @@
     @media only screen and (max-width: $bp-sm) {
       grid-row: 1 / 2;
       grid-column: 1 / -1;
-      width: 70%;
+      width: 85%;
     }
     @media only screen and (max-width: $bp-xs) {
       width: 100%;

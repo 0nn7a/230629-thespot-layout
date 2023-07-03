@@ -49,14 +49,16 @@
     align-items: center;
     transform: translate(0, -50%);
     animation: scroll-text 30s linear infinite;
-    @media only screen and (max-width: $bp-sm) {
-      min-height: 90vw;
-    }
     &_set {
       display: flex;
       gap: 0 5rem;
       padding-left: 5rem;
-      height: 10%;
+      img {
+        height: 5vw;
+        @media only screen and (max-width: $bp-sm) {
+          height: 10vw;
+        }
+      }
     }
   }
 }
