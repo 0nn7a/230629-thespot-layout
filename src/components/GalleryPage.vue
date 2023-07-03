@@ -56,6 +56,12 @@
 .gallery {
   &_container {
     padding: 12rem 8rem;
+    @media only screen and (max-width: $bp-sm) {
+      padding: 12em 5rem;
+    }
+    @media only screen and (max-width: $bp-xs) {
+      padding: 12rem 2rem;
+    }
   }
 
   &_header {
@@ -63,7 +69,14 @@
     grid-template-rows: repeat(2, max-content);
     grid-template-columns: 1fr max-content;
     gap: 0 4rem;
+    justify-items: flex-start;
     align-items: center;
+    @media only screen and (max-width: $bp-sm) {
+      grid-template-rows: repeat(3, max-content);
+      grid-template-columns: 1fr;
+      gap: 1rem 0;
+    }
+
     .heading-1 {
       grid-row: 1 / 2;
       grid-column: 1 / 2;
@@ -75,6 +88,11 @@
     .btn-plus {
       grid-row: 2 / 3;
       grid-column: 2 / -1;
+      @media only screen and (max-width: $bp-sm) {
+        margin-top: 2rem;
+        grid-row: 3 / 4;
+        grid-column: 1 / 2;
+      }
     }
   }
 
@@ -84,6 +102,10 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     padding: 5rem 0 3rem;
+    @media only screen and (max-width: $bp-sm) {
+      grid-template-rows: repeat(4, max-content);
+      grid-template-columns: 1fr 1fr;
+    }
     img {
       width: 100%;
     }
@@ -98,6 +120,9 @@
     position: absolute;
     top: 0;
     left: 0;
+  }
+  @media only screen and (max-width: $bp-sm) {
+    font-size: 1.2rem;
   }
 }
 </style>

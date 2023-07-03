@@ -5,6 +5,7 @@
 
   <TitlePage />
   <GalleryPage />
+  <SliderPicture />
 </template>
 
 <style lang="scss" scoped></style>
