@@ -7,7 +7,7 @@
       <h4 class="heading-3">
         「SPOT」は貸し会議室でもコワーキングスペースでもない，必要なものは全てそろったチームで利用できる1日オフィスです。
       </h4>
-      <button class="btn-plus">コンセプト</button>
+      <button class="btn-plus"><span>コンセプト</span></button>
     </div>
     <div class="gallery_images">
       <img

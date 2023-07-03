@@ -176,49 +176,33 @@ a {
 }
 
 .btn-plus {
-  position: relative;
-  padding-left: 3rem;
-  font-size: 1.6rem;
-  font-weight: 600;
+  display: flex;
+  align-items: center;
   color: currentColor;
   background-color: var(--spot-base-background-color);
   border: none;
   cursor: pointer;
-  transition: 0.2s all ease-in;
 }
-.btn-plus:hover {
-  transform: translateX(5px);
+.btn-plus:hover span {
+  transform: translateX(3px);
 }
 .btn-plus:hover::before {
-  transform: scale(1.25) rotate(90deg);
-}
-.btn-plus:hover::after {
-  top: 50%;
-  left: 1.3rem;
-  font-size: 2rem;
-  transform: translate(-50%, -50%) rotate(90deg);
+  transform: scale(1.2) rotate(90deg);
 }
 .btn-plus::before {
   content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
+  display: inline-block;
   height: 2.4rem;
   width: 2.4rem;
-  background-color: var(--spot-base-text-color);
-  border-radius: 50%;
-  transition: 0.2s all ease-in;
+  margin-right: 0.5rem;
+  background: url("/src/assets/images/icn_plus.svg");
+  transition: 0.3s all ease-out;
 }
-.btn-plus::after {
-  content: "+";
-  position: absolute;
-  top: 50%;
-  left: 1.2rem;
-  font-size: 1.5rem;
-  color: var(--spot-base-background-color);
-  transform: translate(-50%, -50%);
-  transition: 0.2s all ease-in;
+.btn-plus span {
+  position: relative;
+  font-size: 1.6rem;
+  font-weight: 600;
+  transition: 0.3s all ease-out;
 }
 
 /*# sourceMappingURL=style.css.map */
