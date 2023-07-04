@@ -77,7 +77,7 @@
       padding: 5rem 5rem;
     }
     @media only screen and (max-width: $bp-xs) {
-      padding: 2rem 2rem;
+      padding: 4rem 2rem;
     }
 
     @media only screen and (min-width: $bp-lg) {
