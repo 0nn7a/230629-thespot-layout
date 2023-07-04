@@ -8,6 +8,7 @@
   <SliderPicture />
   <FeaturePage />
   <ClientPage />
+  <SpotPage />
 </template>
 
 <style lang="scss" scoped></style>

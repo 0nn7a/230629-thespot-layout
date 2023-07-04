@@ -28,7 +28,12 @@ const openIconList = () => {
       </p>
     </div>
     <div class="client_icons" :class="iconList ? 'client_icons_open' : ''">
-      <img v-for="icon in iconArr" :src="getImageUrl(icon)" loading="lazy" />
+      <img
+        v-for="icon in iconArr"
+        :key="icon"
+        :src="getImageUrl(icon)"
+        loading="lazy"
+      />
       <a
         v-if="!iconList"
         href="javascript:void(0)"
@@ -62,11 +67,12 @@ const openIconList = () => {
   &_icons {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 1rem;
     height: 15vw;
     overflow: hidden;
     @media only screen and (max-width: $bp-sm) {
+      grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
       gap: 0.5rem;
       height: 28vw;
     }
