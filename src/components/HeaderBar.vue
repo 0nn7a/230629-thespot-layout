@@ -64,7 +64,7 @@ watchEffect(() => {
     font-size: 3rem;
     font-weight: 900;
     letter-spacing: 1px;
-    box-shadow: -0.5rem -0.5rem 0 var(--spot-title-subtext-color);
+    box-shadow: -0.5rem -0.5rem 0 var(--spot-light-color);
     transform: rotate(-10deg) skewx(-10deg);
   }
 

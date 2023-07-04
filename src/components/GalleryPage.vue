@@ -57,7 +57,7 @@
   &_container {
     padding: 12rem 8rem;
     @media only screen and (max-width: $bp-sm) {
-      padding: 12em 5rem;
+      padding: 12rem 5rem;
     }
     @media only screen and (max-width: $bp-xs) {
       padding: 12rem 2rem;
@@ -80,6 +80,7 @@
     .heading-1 {
       font-size: 5rem;
       font-weight: 800;
+      line-height: 1.5;
       @media only screen and (max-width: $bp-sm) {
         font-size: 3.2rem;
       }
