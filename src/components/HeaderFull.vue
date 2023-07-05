@@ -19,7 +19,7 @@ const toTop = (num) => {
 
     <a href="#home" class="full_nav_item" @click="toTop(0)">トップ</a>
     <a href="#spot" class="full_nav_item" @click="toTop(5)">施設一覧</a>
-    <a href="javascript:void(0)" class="full_nav_item">Q&A</a>
+    <a href="#Q&A" class="full_nav_item" @click="toTop(7)">Q&A</a>
     <a href="javascript:void(0)" class="full_nav_item">ログイン</a>
     <a href="javascript:void(0)" class="full_nav_item">新規登録</a>
     <button class="btn-dark">

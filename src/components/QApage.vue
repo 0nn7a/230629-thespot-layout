@@ -91,7 +91,7 @@ const question = reactive({
     input[type="checkbox"] {
       display: none;
       &:checked + .qa_label .qa_btn::after {
-        transform: translate(-50%, -50%) rotate(-180deg);
+        transform: translate(-50%, -80%) rotate(-180deg);
       }
       &:checked + .qa_label {
         grid-template-rows: max-content 1fr;
@@ -121,6 +121,9 @@ const question = reactive({
         background-color: var(--spot-icon-color);
       }
       .qa_btn::after {
+        border-color: var(--spot-base-background-color) transparent transparent
+          transparent;
+
         color: var(--spot-base-background-color);
       }
     }
@@ -156,13 +159,13 @@ const question = reactive({
         transition: all 0.25s ease-out;
       }
       &::after {
-        content: "▾";
+        content: "";
         position: absolute;
         top: 50%;
         left: 50%;
-        font-size: 1.5rem;
-        color: var(--spot-icon-color);
-        transform: translate(-50%, -50%);
+        border: 0.5rem solid;
+        border-color: var(--spot-icon-color) transparent transparent transparent;
+        transform: translate(-50%, -20%);
         transition: color 0.25s ease-out, transform 0.25s ease-out 0.3s;
       }
     }

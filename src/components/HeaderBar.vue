@@ -41,7 +41,7 @@ watchEffect(() => {
     <nav v-if="showBar" class="header_nav">
       <a href="#home" class="header_nav_item" @click="toTop(0)">トップ</a>
       <a href="#spot" class="header_nav_item" @click="toTop(5)">施設一覧</a>
-      <a href="javascript:void(0)" class="header_nav_item">Q&A</a>
+      <a href="#Q&A" class="header_nav_item" @click="toTop(7)">Q&A</a>
       <a href="javascript:void(0)" class="header_nav_item">ログイン</a>
       <a href="javascript:void(0)" class="header_nav_item">新規登録</a>
       <button class="btn-dark">
