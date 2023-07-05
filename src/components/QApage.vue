@@ -53,7 +53,7 @@ const question = reactive({
         <label class="qa_label" :for="item.id">
           <h6 class="heading-4">{{ item.id }}</h6>
           <p class="heading-5">{{ item.title }}</p>
-          <button class="qa_btn"></button>
+          <span class="qa_btn"></span>
           <p class="plain-text">{{ item.description }}</p>
         </label>
       </li>
@@ -96,6 +96,9 @@ const question = reactive({
       &:checked + .qa_label {
         grid-template-rows: max-content 1fr;
         gap: 3rem;
+        @media only screen and (max-width: $bp-sm) {
+          gap: 2rem;
+        }
       }
     }
     border-top: 3px solid var(--spot-icon-color);
@@ -108,12 +111,17 @@ const question = reactive({
     grid-template-rows: max-content 0fr;
     grid-template-columns: max-content 1fr max-content;
     gap: 0 3rem;
-    width: 100%;
     padding-top: 3rem;
     margin-bottom: 3rem;
+    width: 100%;
     overflow: hidden;
     cursor: pointer;
     transition: all 0.25s ease-out;
+    @media only screen and (max-width: $bp-sm) {
+      gap: 0 2rem;
+      padding-top: 2rem;
+      margin-bottom: 2rem;
+    }
     &:hover {
       .qa_btn::before {
         height: 100%;

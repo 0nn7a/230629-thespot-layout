@@ -104,9 +104,29 @@ a {
   font-size: 2.2rem;
   font-weight: 800;
 }
+@media only screen and (max-width: 768px) {
+  .heading-4 {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .heading-4 {
+    font-size: 1.8rem;
+  }
+}
 .heading-5 {
   font-size: 2rem;
   font-weight: 800;
+}
+@media only screen and (max-width: 768px) {
+  .heading-5 {
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .heading-5 {
+    font-size: 1.6rem;
+  }
 }
 .heading_badge {
   position: relative;
@@ -135,6 +155,11 @@ a {
   text-align: justify;
   color: var(--spot-title-subtext-color);
 }
+@media only screen and (max-width: 425px) {
+  .plain-text {
+    font-size: 1.2rem;
+  }
+}
 
 .remark-text {
   position: relative;
@@ -146,7 +171,7 @@ a {
   top: 0;
   left: 0;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 425px) {
   .remark-text {
     font-size: 1.2rem;
   }
