@@ -10,6 +10,7 @@
   <ClientPage />
   <SpotPage />
   <FlowPage />
+  <QApage />
 </template>
 
 <style lang="scss" scoped></style>
