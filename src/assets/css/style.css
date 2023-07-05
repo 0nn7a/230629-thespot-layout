@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
 :root {
   --spot-base-background-color: #fff;
@@ -129,6 +130,31 @@ a {
   font-weight: 400;
   text-align: justify;
   color: var(--spot-title-subtext-color);
+}
+
+.remark-text {
+  position: relative;
+  padding-left: 1.5rem;
+}
+.remark-text::before {
+  content: "※";
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@media only screen and (max-width: 768px) {
+  .remark-text {
+    font-size: 1.2rem;
+  }
+}
+
+.link-line {
+  font-weight: 700;
+  color: currentColor;
+  text-decoration: underline currentColor;
+}
+.link-line:hover {
+  text-decoration: none;
 }
 
 .btn-dark {

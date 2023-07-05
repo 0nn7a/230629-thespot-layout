@@ -118,6 +118,29 @@ a {
   text-align: justify;
   color: var(--spot-title-subtext-color);
 }
+.remark-text {
+  position: relative;
+  padding-left: 1.5rem;
+  &::before {
+    content: "※";
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  @media only screen and (max-width: $bp-sm) {
+    font-size: 1.2rem;
+  }
+}
+.link {
+  &-line {
+    font-weight: 700;
+    color: currentColor;
+    text-decoration: underline currentColor;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
 
 // BTN
 .btn-dark {

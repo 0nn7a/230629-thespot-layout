@@ -8,7 +8,6 @@ onMounted(() => {
   for (let i = 1; i <= 45; i++) {
     iconArr.value.push(`client-icon-${i}`);
   }
-  console.log(iconArr.value);
 });
 
 const iconList = ref(false);

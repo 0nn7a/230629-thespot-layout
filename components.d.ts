@@ -9,6 +9,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     ClientPage: typeof import('./src/components/ClientPage.vue')['default']
     FeaturePage: typeof import('./src/components/FeaturePage.vue')['default']
+    FlowPage: typeof import('./src/components/FlowPage.vue')['default']
     GalleryPage: typeof import('./src/components/GalleryPage.vue')['default']
     HeaderBar: typeof import('./src/components/HeaderBar.vue')['default']
     SliderPicture: typeof import('./src/components/SliderPicture.vue')['default']

@@ -43,7 +43,7 @@
         src="/src/assets/images/gallery/index_img_about_08.jpg"
       />
     </div>
-    <p class="plain-text">
+    <p class="plain-text remark-text">
       会議室利用やオフィス利用のお仕事後の懇親会等でご飲食いただくことやランチにケータリング等を頼んでいただくことは問題ありませんが、建物との契約上、誕生会、女子会など飲み会利用、パーティ利用、個人でのご予約はお断りさせていただいております。あらかじめご容赦ください。
     </p>
   </div>
@@ -118,20 +118,6 @@
     img {
       width: 100%;
     }
-  }
-}
-
-.plain-text {
-  position: relative;
-  padding-left: 1.5rem;
-  &::before {
-    content: "※";
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  @media only screen and (max-width: $bp-sm) {
-    font-size: 1.2rem;
   }
 }
 </style>
