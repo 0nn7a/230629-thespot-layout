@@ -102,12 +102,12 @@
 
 .feature {
   &_container {
-    padding: 12rem 8rem;
+    padding: 12rem 8rem 0;
     @media only screen and (max-width: $bp-sm) {
-      padding: 12rem 5rem;
+      padding: 12rem 5rem 0;
     }
     @media only screen and (max-width: $bp-xs) {
-      padding: 12rem 2rem;
+      padding: 12rem 2rem 0;
     }
   }
   &_header {

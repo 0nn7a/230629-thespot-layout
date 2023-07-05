@@ -1,4 +1,11 @@
 <script setup>
+const toTop = (num) => {
+  let appDom = document.querySelector("#app");
+  let containerDom = Array.from(document.querySelectorAll("#app > div"));
+  let location = num ? containerDom[num].offsetTop : 0;
+  appDom.scrollTo({ top: location, behavior: "smooth" });
+};
+
 const showBar = ref(true);
 const pageWidth = ref(window.innerWidth);
 
@@ -20,8 +27,8 @@ watchEffect(() => {
   <header class="header">
     <h1 class="header_logo">SPOT</h1>
     <nav v-if="showBar" class="header_nav">
-      <a href="javascript:void(0)" class="header_nav_item">トップ</a>
-      <a href="javascript:void(0)" class="header_nav_item">施設一覧</a>
+      <a href="#home" class="header_nav_item" @click="toTop(0)">トップ</a>
+      <a href="#spot" class="header_nav_item" @click="toTop(5)">施設一覧</a>
       <a href="javascript:void(0)" class="header_nav_item">Q&A</a>
       <a href="javascript:void(0)" class="header_nav_item">ログイン</a>
       <a href="javascript:void(0)" class="header_nav_item">新規登録</a>

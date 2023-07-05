@@ -68,12 +68,12 @@ const list = reactive({
 
 .flow {
   &_container {
-    padding: 0 8rem 12rem;
+    padding: 12rem 8rem 0;
     @media only screen and (max-width: $bp-sm) {
-      padding: 0 5rem 12rem;
+      padding: 12rem 5rem 0;
     }
     @media only screen and (max-width: $bp-xs) {
-      padding: 0 2rem 12rem;
+      padding: 12rem 2rem 0;
     }
   }
   &_header {
