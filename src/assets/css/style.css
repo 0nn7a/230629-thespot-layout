@@ -46,7 +46,7 @@ html {
   width: 100vw;
   max-width: 100%;
   height: 100vh;
-  padding-top: 14rem;
+  padding-top: 20rem;
   font-family: inherit;
   color: var(--spot-base-text-color);
   background-color: var(--spot-base-background-color);
@@ -55,6 +55,10 @@ html {
 }
 #app::-webkit-scrollbar {
   width: 0;
+}
+
+.remove-scroll {
+  overflow-y: hidden !important;
 }
 
 h1,
@@ -234,6 +238,21 @@ a {
   font-size: 1.6rem;
   font-weight: 600;
   transition: 0.3s all ease-out;
+}
+
+.opacity-enter-from,
+.opacity-leave-to {
+  opacity: 0;
+}
+
+.opacity-enter-active,
+.opacity-leave-active {
+  transition: all 0.4s ease-in-out;
+}
+
+.opacity-enter-to,
+.opacity-leave-from {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=style.css.map */

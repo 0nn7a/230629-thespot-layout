@@ -50,16 +50,21 @@ html {
   width: 100vw;
   max-width: 100%;
   height: 100vh;
-  padding-top: 14rem;
+  padding-top: 20rem;
   font-family: inherit;
   color: var(--spot-base-text-color);
   background-color: var(--spot-base-background-color);
   border: 0.6rem solid var(--spot-status-bar-color);
   overflow-y: scroll;
+
   &::-webkit-scrollbar {
     width: 0;
   }
 }
+.remove-scroll {
+  overflow-y: hidden !important;
+}
+
 h1,
 h2,
 h3,
@@ -168,6 +173,7 @@ a {
   }
 }
 .btn-dark_icon-arrow {
+  //btn-dark > span
   position: relative;
   display: block;
   width: 11px;
@@ -224,4 +230,18 @@ a {
     font-weight: 600;
     transition: 0.3s all ease-out;
   }
+}
+
+// Vue-Animation
+.opacity-enter-from,
+.opacity-leave-to {
+  opacity: 0;
+}
+.opacity-enter-active,
+.opacity-leave-active {
+  transition: all 0.4s ease-in-out;
+}
+.opacity-enter-to,
+.opacity-leave-from {
+  opacity: 1;
 }

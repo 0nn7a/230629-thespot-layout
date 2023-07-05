@@ -6,6 +6,17 @@ const toTop = (num) => {
   appDom.scrollTo({ top: location, behavior: "smooth" });
 };
 
+const showFull = ref(false);
+const toggleFull = (act) => {
+  showFull.value = act;
+  let appDom = document.querySelector("#app");
+  if (act) {
+    appDom.classList.add("remove-scroll");
+  } else {
+    appDom.classList.remove("remove-scroll");
+  }
+};
+
 const showBar = ref(true);
 const pageWidth = ref(window.innerWidth);
 
@@ -25,7 +36,8 @@ watchEffect(() => {
 
 <template>
   <header class="header">
-    <h1 class="header_logo">SPOT</h1>
+    <h1 v-if="!showFull" class="header_logo">SPOT</h1>
+
     <nav v-if="showBar" class="header_nav">
       <a href="#home" class="header_nav_item" @click="toTop(0)">トップ</a>
       <a href="#spot" class="header_nav_item" @click="toTop(5)">施設一覧</a>
@@ -39,8 +51,16 @@ watchEffect(() => {
         </div>
       </button>
     </nav>
-    <button v-else class="header_btn"></button>
+
+    <button
+      v-else-if="!showFull"
+      class="header_btn"
+      @click="toggleFull(true)"
+    ></button>
   </header>
+  <transition name="opacity">
+    <HeaderFull v-if="showFull" @close-full="toggleFull(false)" />
+  </transition>
 </template>
 
 <style lang="scss" scoped>

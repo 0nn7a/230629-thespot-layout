@@ -12,6 +12,7 @@ declare module 'vue' {
     FlowPage: typeof import('./src/components/FlowPage.vue')['default']
     GalleryPage: typeof import('./src/components/GalleryPage.vue')['default']
     HeaderBar: typeof import('./src/components/HeaderBar.vue')['default']
+    HeaderFull: typeof import('./src/components/HeaderFull.vue')['default']
     SliderPicture: typeof import('./src/components/SliderPicture.vue')['default']
     SpotPage: typeof import('./src/components/SpotPage.vue')['default']
     TitlePage: typeof import('./src/components/TitlePage.vue')['default']
