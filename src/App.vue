@@ -11,6 +11,7 @@
   <SpotPage />
   <FlowPage />
   <QApage />
+  <FooterPage />
 </template>
 
 <style lang="scss" scoped></style>

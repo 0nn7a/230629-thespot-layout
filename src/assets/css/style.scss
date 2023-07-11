@@ -4,25 +4,27 @@
 
 :root {
   --spot-base-background-color: #fff;
-  --spot-base-text-color: #000;
+  --spot-sub-background-color: #f7f7f7;
+
   --spot-light-text-color: #666;
-  --spot-base-shadow-color: #bdbdbd;
+  --spot-base-text-color: #000;
+  --spot-base-subtext-color: #333;
 
   --spot-icon-color: #111;
   --spot-light-color: #666;
 
+  --spot-base-shadow-color: #bdbdbd;
+
   --spot-status-bar-color: #000;
-  --spot-progress-bar-color: #06c755;
-  --spot-progress-background-color: #fff;
 
-  --spot-title-text-color: #111;
-  --spot-title-subtext-color: #333;
-  --spot-title-background-color: #fff;
-  --spot-title-button-color: #111;
-
-  --spot-title-button-area-background-color: rgba(255, 255, 255, 0.12);
-  --spot-title-button-area-border-color: rgba(0, 0, 0, 0.15);
-  --spot-light-button-border-color: rgba(0, 0, 0, 0.15);
+  //--spot-title-text-color: #111;
+  //--spot-title-background-color: #fff;
+  //--spot-title-button-color: #111;
+  //--spot-title-button-area-background-color: rgba(255, 255, 255, 0.12);
+  //--spot-title-button-area-border-color: rgba(0, 0, 0, 0.15);
+  //--spot-light-button-border-color: rgba(0, 0, 0, 0.15);
+  //--spot-progress-bar-color: #06c755;
+  //--spot-progress-background-color: #fff;
 }
 
 *,
@@ -89,12 +91,26 @@ a {
   text-decoration: none;
 }
 
+// LOGO
+.logo {
+  @include chatBox;
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  box-shadow: -0.5rem -0.5rem 0 var(--spot-light-color);
+  transform: rotate(-10deg) skewx(-10deg);
+  @media only screen and (max-width: $bp-sm) {
+    font-size: 1.8rem;
+  }
+}
+
 // TEXT
 .heading {
   &-1 {
     font-size: 5.5rem;
     font-weight: 700;
     line-height: 1;
+    color: var(--spot-base-text-color);
     @media only screen and (max-width: $bp-xs) {
       font-size: 4.5rem;
     }
@@ -102,10 +118,12 @@ a {
   &-3 {
     font-size: 1.4rem;
     font-weight: 600;
+    color: var(--spot-base-text-color);
   }
   &-4 {
     font-size: 2.2rem;
     font-weight: 800;
+    color: var(--spot-base-text-color);
     @media only screen and (max-width: $bp-sm) {
       font-size: 2rem;
     }
@@ -116,11 +134,23 @@ a {
   &-5 {
     font-size: 2rem;
     font-weight: 800;
+    color: var(--spot-base-text-color);
     @media only screen and (max-width: $bp-sm) {
       font-size: 1.8rem;
     }
     @media only screen and (max-width: $bp-xs) {
       font-size: 1.6rem;
+    }
+  }
+  &-6 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--spot-base-text-color);
+    @media only screen and (max-width: $bp-sm) {
+      font-size: 1.2rem;
+    }
+    @media only screen and (max-width: $bp-xs) {
+      font-size: 1rem;
     }
   }
   &_badge {
@@ -133,7 +163,7 @@ a {
   font-size: 1.4rem;
   font-weight: 400;
   text-align: justify;
-  color: var(--spot-title-subtext-color);
+  color: var(--spot-base-subtext-color);
   @media only screen and (max-width: $bp-xs) {
     font-size: 1.2rem;
   }

@@ -36,7 +36,7 @@ watchEffect(() => {
 
 <template>
   <header class="header">
-    <h1 v-if="!showFull" class="header_logo">SPOT</h1>
+    <h1 v-if="!showFull" class="logo">SPOT</h1>
 
     <nav v-if="showBar" class="header_nav">
       <a href="#home" class="header_nav_item" @click="toTop(0)">トップ</a>
@@ -85,14 +85,6 @@ watchEffect(() => {
   }
   @media only screen and (min-width: $bp-lg) {
     padding: 6rem;
-  }
-  &_logo {
-    @include chatBox;
-    font-size: 3rem;
-    font-weight: 900;
-    letter-spacing: 1px;
-    box-shadow: -0.5rem -0.5rem 0 var(--spot-light-color);
-    transform: rotate(-10deg) skewx(-10deg);
   }
 
   &_nav {

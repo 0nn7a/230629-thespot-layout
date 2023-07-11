@@ -10,6 +10,7 @@ declare module 'vue' {
     ClientPage: typeof import('./src/components/ClientPage.vue')['default']
     FeaturePage: typeof import('./src/components/FeaturePage.vue')['default']
     FlowPage: typeof import('./src/components/FlowPage.vue')['default']
+    FooterPage: typeof import('./src/components/FooterPage.vue')['default']
     GalleryPage: typeof import('./src/components/GalleryPage.vue')['default']
     HeaderBar: typeof import('./src/components/HeaderBar.vue')['default']
     HeaderFull: typeof import('./src/components/HeaderFull.vue')['default']

@@ -2,21 +2,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
 :root {
   --spot-base-background-color: #fff;
-  --spot-base-text-color: #000;
+  --spot-sub-background-color: #f7f7f7;
   --spot-light-text-color: #666;
-  --spot-base-shadow-color: #bdbdbd;
+  --spot-base-text-color: #000;
+  --spot-base-subtext-color: #333;
   --spot-icon-color: #111;
   --spot-light-color: #666;
+  --spot-base-shadow-color: #bdbdbd;
   --spot-status-bar-color: #000;
-  --spot-progress-bar-color: #06c755;
-  --spot-progress-background-color: #fff;
-  --spot-title-text-color: #111;
-  --spot-title-subtext-color: #333;
-  --spot-title-background-color: #fff;
-  --spot-title-button-color: #111;
-  --spot-title-button-area-background-color: rgba(255, 255, 255, 0.12);
-  --spot-title-button-area-border-color: rgba(0, 0, 0, 0.15);
-  --spot-light-button-border-color: rgba(0, 0, 0, 0.15);
 }
 
 *,
@@ -86,10 +79,40 @@ a {
   text-decoration: none;
 }
 
+.logo {
+  position: relative;
+  margin-bottom: 2rem;
+  padding: 0.3rem 1rem;
+  background-color: var(--spot-icon-color);
+  color: var(--spot-base-background-color);
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  box-shadow: -0.5rem -0.5rem 0 var(--spot-light-color);
+  transform: rotate(-10deg) skewx(-10deg);
+}
+.logo::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-left-color: var(--spot-icon-color);
+  transform: translateY(50%);
+}
+@media only screen and (max-width: 768px) {
+  .logo {
+    font-size: 1.8rem;
+  }
+}
+
 .heading-1 {
   font-size: 5.5rem;
   font-weight: 700;
   line-height: 1;
+  color: var(--spot-base-text-color);
 }
 @media only screen and (max-width: 425px) {
   .heading-1 {
@@ -99,10 +122,12 @@ a {
 .heading-3 {
   font-size: 1.4rem;
   font-weight: 600;
+  color: var(--spot-base-text-color);
 }
 .heading-4 {
   font-size: 2.2rem;
   font-weight: 800;
+  color: var(--spot-base-text-color);
 }
 @media only screen and (max-width: 768px) {
   .heading-4 {
@@ -117,6 +142,7 @@ a {
 .heading-5 {
   font-size: 2rem;
   font-weight: 800;
+  color: var(--spot-base-text-color);
 }
 @media only screen and (max-width: 768px) {
   .heading-5 {
@@ -126,6 +152,21 @@ a {
 @media only screen and (max-width: 425px) {
   .heading-5 {
     font-size: 1.6rem;
+  }
+}
+.heading-6 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--spot-base-text-color);
+}
+@media only screen and (max-width: 768px) {
+  .heading-6 {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .heading-6 {
+    font-size: 1rem;
   }
 }
 .heading_badge {
@@ -153,7 +194,7 @@ a {
   font-size: 1.4rem;
   font-weight: 400;
   text-align: justify;
-  color: var(--spot-title-subtext-color);
+  color: var(--spot-base-subtext-color);
 }
 @media only screen and (max-width: 425px) {
   .plain-text {
