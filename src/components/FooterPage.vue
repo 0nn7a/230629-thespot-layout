@@ -6,43 +6,42 @@
     <section class="contents_container">
       <h3 class="heading-5">CONTENTS</h3>
       <ul class="contents_list">
-        <li class="heading-6">特徴・設備</li>
-        <li class="heading-6">ご利用実績</li>
-        <li class="heading-6">施設・料金</li>
-        <li class="heading-6">ご利用の流れ</li>
+        <li class="heading-6">{{ $t("footer.content1") }}</li>
+        <li class="heading-6">{{ $t("footer.content2") }}</li>
+        <li class="heading-6">{{ $t("footer.content3") }}</li>
+        <li class="heading-6">{{ $t("footer.content4") }}</li>
       </ul>
       <ul class="contents_list">
-        <li class="heading-6">よくあるご質問</li>
-        <li class="heading-6">運営会社情報</li>
-        <li class="heading-6">プライバシーポリシー</li>
-        <li class="heading-6">お問い合わせ</li>
+        <li class="heading-6">{{ $t("footer.content5") }}</li>
+        <li class="heading-6">{{ $t("footer.content6") }}</li>
+        <li class="heading-6">{{ $t("footer.content7") }}</li>
+        <li class="heading-6">{{ $t("footer.content8") }}</li>
       </ul>
     </section>
     <section class="spot_container">
       <h3 class="heading-5">SPOT</h3>
       <ul class="spot_list">
         <li class="spot_item">
-          <h5 class="heading-6">SPOT 虎ノ門ヒルズビジネスタワーサイド</h5>
+          <h5 class="heading-6">{{ $t("footer.spot1") }}</h5>
         </li>
         <li class="spot_item">
-          <h5 class="heading-6">SPOT 新宿マルイアネックスサイド</h5>
+          <h5 class="heading-6">{{ $t("footer.spot2") }}</h5>
         </li>
         <li class="spot_item">
-          <h5 class="heading-6">SPOT 神保町ビル一棟丸ごと</h5>
+          <h5 class="heading-6">{{ $t("footer.spot3") }}</h5>
         </li>
         <li class="spot_item">
-          <h5 class="heading-6">SPOT 六本木ミッドタウンサイド</h5>
+          <h5 class="heading-6">{{ $t("footer.spot4") }}</h5>
         </li>
         <li class="spot_item">
-          <h5 class="heading-6">SPOT 表参道駅裏の隠れ家</h5>
+          <h5 class="heading-6">{{ $t("footer.spot5") }}</h5>
         </li>
         <li class="spot_item">
-          <h5 class="heading-6">SPOT 渋谷ストリームサイド</h5>
+          <h5 class="heading-6">{{ $t("footer.spot6") }}</h5>
         </li>
         <li class="spot_item">
           <h5 class="heading-6">
-            SPOT 六本木ミッドタウンサイド <br />
-            ANNEX COMING SOON
+            {{ $t("footer.spot7") }}
           </h5>
         </li>
       </ul>

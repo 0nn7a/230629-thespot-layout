@@ -6,22 +6,22 @@ const list = reactive({
   data: [
     {
       header: "index_img_flow_no_01",
-      title: "Webからご予約",
+      title: "title1",
       img: "index_img_flow_01",
     },
     {
       header: "index_img_flow_no_02",
-      title: "入館方法を確認",
+      title: "title2",
       img: "index_img_flow_02",
     },
     {
       header: "index_img_flow_no_03",
-      title: "SPOTご利用",
+      title: "title3",
       img: "index_img_flow_03",
     },
     {
       header: "index_img_flow_no_04",
-      title: "お支払い",
+      title: "title4",
       img: "index_img_flow_04",
     },
   ],
@@ -32,10 +32,10 @@ const list = reactive({
   <div class="flow_container">
     <div class="flow_header">
       <h2 class="heading-1">FLOW</h2>
-      <h4 class="heading-3">ご利用の流れ</h4>
+      <h4 class="heading-3">{{ $t("flow.description") }}</h4>
       <br />
       <p class="plain-text remark-text">
-        ご利用の流れは、以下の流れです。会議室利用やオフィス利用の法人向けに後払い可能なので安心です。
+        {{ $t("flow.remark") }}
       </p>
       <ul class="flow_list">
         <li v-for="item in list.data" :key="item.img" class="flow_item">
@@ -44,7 +44,7 @@ const list = reactive({
             :src="getImageUrl(item.header)"
             loading="lazy"
           />
-          <h5 class="heading-5">{{ item.title }}</h5>
+          <h5 class="heading-5">{{ $t(`flow.${item.title}`) }}</h5>
           <img
             class="flow_item_img"
             :src="getImageUrl(item.img)"
@@ -53,11 +53,11 @@ const list = reactive({
         </li>
       </ul>
       <p class="plain-text remark-text">
-        キャンセルはご利用の4日前まで受け付けています。ご利用4日前までのキャンセル費用はかかりません。
+        {{ $t("flow.remark2") }}
       </p>
       <p class="plain-text remark-text">
-        <a href="javascript:void(0)" class="link-line">利用規約</a
-        >に同意の上、ご予約をお願いします。
+        <a href="javascript:void(0)" class="link-line"> {{ $t("flow.lay") }}</a
+        >{{ $t("flow.remark3") }}
       </p>
     </div>
   </div>

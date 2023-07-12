@@ -3,11 +3,13 @@
 <template>
   <div class="gallery_container">
     <div class="gallery_header">
-      <h2 class="heading-1">SPOTで集まろう!<br />SPOTでつながろう!</h2>
+      <h2 class="heading-1" v-html="$t('gallery.title')"></h2>
       <h4 class="heading-3">
-        「SPOT」は貸し会議室でもコワーキングスペースでもない，必要なものは全てそろったチームで利用できる1日オフィスです。
+        {{ $t("gallery.description") }}
       </h4>
-      <button class="btn-plus"><span>コンセプト</span></button>
+      <button class="btn-plus">
+        <span> {{ $t("gallery.btn") }} </span>
+      </button>
     </div>
     <div class="gallery_images">
       <img
@@ -44,7 +46,7 @@
       />
     </div>
     <p class="plain-text remark-text">
-      会議室利用やオフィス利用のお仕事後の懇親会等でご飲食いただくことやランチにケータリング等を頼んでいただくことは問題ありませんが、建物との契約上、誕生会、女子会など飲み会利用、パーティ利用、個人でのご予約はお断りさせていただいております。あらかじめご容赦ください。
+      {{ $t("gallery.remark") }}
     </p>
   </div>
 </template>

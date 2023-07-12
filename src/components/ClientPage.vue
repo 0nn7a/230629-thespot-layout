@@ -20,10 +20,10 @@ const openIconList = () => {
   <div class="client_container">
     <div class="client_header">
       <h2 class="heading-1">CLIENT</h2>
-      <h4 class="heading-3">ご利用実績</h4>
+      <h4 class="heading-3">{{ $t("client.description") }}</h4>
       <br />
       <p class="plain-text">
-        スタートアップや大企業・マスコミ関連の撮影など幅広い用途でご利用いただいています。（関連HOLDER施設の事例含む）
+        {{ $t("client.remark") }}
       </p>
     </div>
     <div class="client_icons" :class="iconList ? 'client_icons_open' : ''">
@@ -39,7 +39,7 @@ const openIconList = () => {
         class="client_btn"
         @click="openIconList"
       >
-        <span>もっと見る ▾</span>
+        <span> {{ $t("client.more") }}</span>
       </a>
     </div>
   </div>

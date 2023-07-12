@@ -1,4 +1,20 @@
 <script setup>
+import { useI18n } from "vue-i18n";
+const { locale } = useI18n();
+
+const language = computed({
+  get() {
+    return locale.value === "ja-JP" ? "中文" : "日本語";
+  },
+});
+const changeLanguage = () => {
+  if (locale.value === "ja-JP") {
+    locale.value = "zh-TW";
+  } else {
+    locale.value = "ja-JP";
+  }
+};
+
 const emit = defineEmits(["closeFull"]);
 const sendClose = () => {
   emit("closeFull");
@@ -17,14 +33,22 @@ const toTop = (num) => {
   <nav class="full_nav">
     <button class="btn-exit" @click="sendClose"></button>
 
-    <a href="#home" class="full_nav_item" @click="toTop(0)">トップ</a>
-    <a href="#spot" class="full_nav_item" @click="toTop(5)">施設一覧</a>
+    <a href="#home" class="full_nav_item" @click="toTop(0)">
+      {{ $t("header.top") }}
+    </a>
+    <a href="#spot" class="full_nav_item" @click="toTop(5)">
+      {{ $t("header.facility") }}
+    </a>
     <a href="#Q&A" class="full_nav_item" @click="toTop(7)">Q&A</a>
-    <a href="javascript:void(0)" class="full_nav_item">ログイン</a>
-    <a href="javascript:void(0)" class="full_nav_item">新規登録</a>
-    <button class="btn-dark">
+    <a href="javascript:void(0)" class="full_nav_item">
+      {{ $t("header.login") }}
+    </a>
+    <a href="javascript:void(0)" class="full_nav_item">
+      {{ $t("header.signup") }}
+    </a>
+    <button class="btn-dark" @click="changeLanguage">
       <div style="display: flex; align-items: center">
-        for OWNER
+        {{ language }}
         <span class="btn-dark_icon-arrow" />
       </div>
     </button>

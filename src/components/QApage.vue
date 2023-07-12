@@ -3,39 +3,33 @@ const question = reactive({
   data: [
     {
       id: "01",
-      title: "事前に荷物のお預かりは可能でしょうか？",
-      description:
-        "申し訳ありません。スペースの問題及び管理上、荷物のお預かりは行っておりません。",
+      title: "title1",
+      description: "ans1",
     },
     {
       id: "02",
-      title: "大学生のサークルの懇親会での利用は可能でしょうか？",
-      description:
-        "申し訳ありません。法人向けのご予約に限定させていただいております。また、建物オーナーとの契約上、飲み会やパーティ利用は禁止事項に入っているケースもありますため、原則受けしておりません。",
+      title: "title2",
+      description: "ans2",
     },
     {
       id: "03",
-      title: "テレビ番組や動画撮影は可能でしょうか？",
-      description:
-        "機材搬入や騒音等の制限がある場合がありますので、事前に内容をご相談ください。施設によってはお断りさせていただく場合があります。",
+      title: "title3",
+      description: "ans3",
     },
     {
       id: "04",
-      title: "飲食の持ち込みは可能でしょうか？",
-      description:
-        "少量（１０名程度のお弁当程度）であれば問題ありません。ケータリングを頼まれる、アルコールを伴う懇親会などを実施されるなど際には特別ごみ処理清掃費用を必須とさせていただいております。",
+      title: "title4",
+      description: "ans4",
     },
     {
       id: "05",
-      title: "事前の下見は可能でしょうか？",
-      description:
-        "施設によって対応可能な場合もありますので、お問合せください。",
+      title: "title5",
+      description: "ans5",
     },
     {
       id: "06",
-      title: "当日予約は可能でしょうか？",
-      description:
-        "申し訳ありません。前日までのご予約とさせていただいております。",
+      title: "title6",
+      description: "ans6",
     },
   ],
 });
@@ -45,19 +39,19 @@ const question = reactive({
   <div class="qa_container">
     <div class="qa_header">
       <h2 class="heading-1">Q&A</h2>
-      <h4 class="heading-3">よくあるご質問</h4>
+      <h4 class="heading-3">{{ $t("qa.description") }}</h4>
     </div>
     <ul class="qa_list">
       <li class="qa_item" v-for="item in question.data" :key="item.id">
         <input type="checkbox" :id="item.id" :name="item.id" />
         <label class="qa_label" :for="item.id">
           <h6 class="heading-4">{{ item.id }}</h6>
-          <p class="heading-5">{{ item.title }}</p>
+          <p class="heading-5">{{ $t(`qa.${item.title}`) }}</p>
           <span class="qa_btn"></span>
-          <p class="plain-text">{{ item.description }}</p>
+          <p class="plain-text">{{ $t(`qa.${item.description}`) }}</p>
         </label>
       </li>
-      <a href="javascript:void(0)" class="link-line">QA一覧を見る</a>
+      <a href="javascript:void(0)" class="link-line">{{ $t("qa.more") }}</a>
     </ul>
   </div>
 </template>

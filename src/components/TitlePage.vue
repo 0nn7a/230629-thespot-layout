@@ -7,19 +7,15 @@
       class="title_img"
       loading="lazy"
     />
-    <img
-      src="/src/assets/images/title_text.svg"
-      class="title_text"
-      loading="lazy"
-    />
+    <h1 class="title_text" v-html="$t('title.title')"></h1>
     <div class="title_soon">
       <h5 class="heading_badge">COMING SOON</h5>
       <p class="plain-text">
-        「SPOT六本木ミッドタウンサイド ANNEX」2023年秋 新規オープン予定。
+        {{ $t("title.comingSoon") }}
       </p>
     </div>
     <div class="title_company">
-      <h5 class="heading_badge">ご利用企業様の一例</h5>
+      <h5 class="heading_badge">{{ $t("title.badge") }}</h5>
       <div class="title_company_logos">
         <img
           src="/src/assets/images/company/index_img_case_basecorp.jpg"
@@ -97,15 +93,17 @@
   }
   &_text {
     grid-column: 2 / 3;
-    width: 90%;
+    width: 100%;
+    font-size: 3.4vw;
+    font-weight: 800;
     margin-bottom: 6rem;
     @media only screen and (max-width: $bp-sm) {
       grid-row: 1 / 2;
       grid-column: 1 / -1;
-      width: 85%;
+      font-size: 6.4vw;
     }
     @media only screen and (max-width: $bp-xs) {
-      width: 100%;
+      font-size: 7vw;
     }
   }
 

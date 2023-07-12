@@ -4,7 +4,7 @@
   <div class="feature_container">
     <div class="feature_header">
       <h2 class="heading-1">FEATURE</h2>
-      <h4 class="heading-3">特徴・設備について</h4>
+      <h4 class="heading-3">{{ $t("feature.description") }}</h4>
     </div>
     <div class="feature_icons">
       <div class="feature_icons_item">
@@ -12,9 +12,9 @@
           src="/src/assets/images/feature/index_img_feature_01.svg"
           loading="lazy"
         />
-        <h5 class="heading-5">高速Wi-Fi</h5>
+        <h5 class="heading-5">{{ $t("feature.wifi") }}</h5>
         <p class="plain-text">
-          高速インターネット（ソニーNURO等）を完備しています。
+          {{ $t("feature.wifiDes") }}
         </p>
       </div>
       <div class="feature_icons_item">
@@ -22,17 +22,17 @@
           src="/src/assets/images/feature/index_img_feature_02.svg"
           loading="lazy"
         />
-        <h5 class="heading-5">スマートキー入館</h5>
-        <p class="plain-text">スマートキーでセキュリティ管理をしています。</p>
+        <h5 class="heading-5">{{ $t("feature.door") }}</h5>
+        <p class="plain-text">{{ $t("feature.doorDes") }}</p>
       </div>
       <div class="feature_icons_item">
         <img
           src="/src/assets/images/feature/index_img_feature_03.svg"
           loading="lazy"
         />
-        <h5 class="heading-5">こだわりの家具</h5>
+        <h5 class="heading-5">{{ $t("feature.sofa") }}</h5>
         <p class="plain-text">
-          チェアは全てアーロンチェア。ソファやテーブルなど居心地の良い空間になってます。
+          {{ $t("feature.sofaDes") }}
         </p>
       </div>
       <div class="feature_icons_item">
@@ -40,9 +40,9 @@
           src="/src/assets/images/feature/index_img_feature_04.svg"
           loading="lazy"
         />
-        <h5 class="heading-5">好アクセス</h5>
+        <h5 class="heading-5">{{ $t("feature.traffic") }}</h5>
         <p class="plain-text">
-          SPOTは駅から近く、アクセスしやすい場所にあります。
+          {{ $t("feature.trafficDes") }}
         </p>
       </div>
       <div class="feature_icons_item">
@@ -50,9 +50,9 @@
           src="/src/assets/images/feature/index_img_feature_05.svg"
           loading="lazy"
         />
-        <h5 class="heading-5">スクリーンやモニター</h5>
+        <h5 class="heading-5">{{ $t("feature.screen") }}</h5>
         <p class="plain-text">
-          100インチスクリーン（プロジェクタ設置）あるいは50インチモニターをご用意しています。
+          {{ $t("feature.screenDes") }}
         </p>
       </div>
       <div class="feature_icons_item">
@@ -60,9 +60,9 @@
           src="/src/assets/images/feature/index_img_feature_06.svg"
           loading="lazy"
         />
-        <h5 class="heading-5">後払い可</h5>
+        <h5 class="heading-5">{{ $t("feature.pay") }}</h5>
         <p class="plain-text">
-          お支払いはクレジットカードの他、請求書払いもOK。ビジネス利用に適しています。
+          {{ $t("feature.payDes") }}
         </p>
       </div>
       <div class="feature_icons_item">
@@ -70,17 +70,17 @@
           src="/src/assets/images/feature/index_img_feature_07.svg"
           loading="lazy"
         />
-        <h5 class="heading-5">フリードリンク</h5>
-        <p class="plain-text">ウォーターサーバーをご用意しております。</p>
+        <h5 class="heading-5">{{ $t("feature.drink") }}</h5>
+        <p class="plain-text">{{ $t("feature.drinkDes") }}</p>
       </div>
       <div class="feature_icons_item">
         <img
           src="/src/assets/images/feature/index_img_feature_08.svg"
           loading="lazy"
         />
-        <h5 class="heading-5">豊富な備品</h5>
+        <h5 class="heading-5">{{ $t("feature.item") }}</h5>
         <p class="plain-text">
-          iPhone用充電器ケーブル、HDMIケーブルや文房具類などを取り揃えております。
+          {{ $t("feature.itemDes") }}
         </p>
       </div>
       <div class="feature_icons_item">
@@ -88,9 +88,9 @@
           src="/src/assets/images/feature/index_img_feature_09.svg"
           loading="lazy"
         />
-        <h5 class="heading-5">登記</h5>
+        <h5 class="heading-5">{{ $t("feature.order") }}</h5>
         <p class="plain-text">
-          法人登記も可能です。詳しくはお問い合わせください。
+          {{ $t("feature.orderDes") }}
         </p>
       </div>
     </div>
